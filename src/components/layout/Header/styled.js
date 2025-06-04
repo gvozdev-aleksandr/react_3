@@ -3,6 +3,5 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
-    min-height: 72px;
-    margin-bottom: 463px;    
+    min-height: 72px;      
 `;

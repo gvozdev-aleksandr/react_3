@@ -18,7 +18,8 @@ export default defineConfig({
       '@pages': resolve(__dirname, 'src/pages'),
       '@assets': resolve(__dirname, 'src/assets'),
       '@mocks': resolve(__dirname, 'src/mocks'),
-      '@themes': resolve(__dirname, 'src/themes')
+      '@themes': resolve(__dirname, 'src/themes'),
+      '@styled': resolve(__dirname, 'src/components/styled')
     },
   },
 });
