@@ -3,6 +3,7 @@ import BgImage from '@assets/bg.png';
 
 export const Main = styled.main`
     background-image: url(${BgImage});
+    background-repeat: no-repeat;
     width: ${(props) => props.theme.desktopWidth};
     padding-top: 16px;
     padding-left: ${(props) => props.theme.desktopPadding};

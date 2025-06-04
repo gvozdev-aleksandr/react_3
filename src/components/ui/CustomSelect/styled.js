@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import Arrow from '@assets/select-arrow.svg?react';
-import { Ul } from '@styled';
+import { Ul, InputTemplate } from '@styled';
 
 export const SelectContainer = styled.div`
     position: relative;
@@ -9,25 +8,8 @@ export const SelectContainer = styled.div`
 `;
 
 export const SelectButton = styled.button`
-    position: relative;
-    width: 100%;
-    padding: 13px 40px 13px 16px;
-    margin-bottom: 8px;
-    border: 1px solid #E1E3E4;
-    border-radius: 8px;
-    font-size: 16px;
-    line-height: 150%;
-    color: ${(props) => props.theme.secondaryTextColor};
-    background-color: transparent;
-    text-align: start;
-    cursor: pointer;
-    transition: all 0.2s ease;
-
-    &:focus {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-    }
-
+    ${InputTemplate}
+    
     &::after {
         position: absolute;
         content: '';
@@ -37,8 +19,7 @@ export const SelectButton = styled.button`
         border-bottom: 2px solid ${(props) => props.theme.secondaryTextColor};
         right: 16px;
         top: 23px;
-        transform: translateY(-50%) rotate(-45deg);
-        
+        transform: translateY(-50%) rotate(-45deg);        
         transition: transform 0.2s ease;
     }
 
