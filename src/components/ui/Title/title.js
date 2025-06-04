@@ -18,7 +18,7 @@ const TitleSizeValue = {
     },
     [TitleSize.SMALL]: {
         fontSize: '24px',
-        lineHeight: '29px'
+        lineHeight: '32px'
     },
     [TitleSize.EXTRA_SMALL]: {
         fontSize: '18px',
@@ -40,7 +40,7 @@ export const Title = styled.h1`
     margin-bottom: ${( props ) => props.$marginBottom ? `${props.$marginBottom}px` : '40px'};
     font-weight: 700;
     ${(props) => getSizeValues(props.size)};
-    color: ${(props) => props.color || props.theme.secondaryTextColor};
+    color: ${(props) => props.color || props.theme.primaryTextColor};
     text-transform: ${({ $uppercase }) => $uppercase ? 'uppercase' : 'none'};
 `;
 
