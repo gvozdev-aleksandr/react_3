@@ -23,7 +23,13 @@ function App() {
         <div className="card">
           <button onClick={() => setCount((count) => count + 1)}>+</button>
           <span>count is {count}</span>
-          <button onClick={() => setCount((count) => count - 1)}>-</button>          
+          <button
+            onClick={() => setCount((count) => count - 1)}
+            disabled={count <= 0}
+            style={{ opacity: count <= 0 ? 0.5 : 1 }}
+          >
+            -
+          </button>          
         </div>        
       </PageWrapper>
     </>

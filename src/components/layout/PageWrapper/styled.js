@@ -1,12 +1,17 @@
 import styled from "styled-components";
-import BgImage from '@assets/bg.png';
+import { Img } from '@styled';
 
 export const Main = styled.main`
-    background-image: url(${BgImage});
-    background-repeat: no-repeat;
-    width: ${(props) => props.theme.desktopWidth};
-    padding-top: 16px;
-    padding-left: ${(props) => props.theme.desktopPadding};
-    padding-right: ${(props) => props.theme.desktopPadding};
-    margin: 0 auto;
+    position: relative;    
+    padding-top: 16px;    
+`;
+
+export const BgImg = styled(Img)`
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 985px;
+    object-fit: cover;
+    background-color: #7a8b99;
+    z-index: -1;
 `;

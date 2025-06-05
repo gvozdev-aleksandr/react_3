@@ -1,13 +1,16 @@
 import styled from "styled-components";
-import { Img } from "@styled";
+import { Img, Container } from "@styled";
 
-export const StyledGuide = styled.section`
-    display: grid;
-    grid-template-columns: 480px 1fr;
-    gap: 120px;
+export const StyledGuide = styled.section`    
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: ${(props) => props.theme.bgWhite};
+`;
+
+export const GuideContainer = styled(Container)`
+    display: grid;
+    grid-template-columns: 480px 1fr;
+    gap: 120px;
 `;
 
 export const ImageWrapper = styled.div`

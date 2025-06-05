@@ -1,13 +1,15 @@
 import React from "react";
-import { StyledHeader } from "./styled";
+import { StyledHeader, HeaderContainer } from "./styled";
 import Logo from "@ui/Logo/Logo";
 import MainNav from "../Nav/Nav";
 
 function Header() {
     return (
         <StyledHeader>
-            <Logo />
-            <MainNav />
+            <HeaderContainer>
+                <Logo />
+                <MainNav />
+            </HeaderContainer>
         </StyledHeader>
     );
 }
