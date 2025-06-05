@@ -1,10 +1,10 @@
 import React from "react";
-import { StyledFooter, InfoWrapper, InfoContacts, InfoDescription, ContactsLinks, Link, SocialList, SocialItem, SocialLink, CopyrightWrapper, FooterContainer, CopyrightName, CopyrightPolicy } from "./styled";
-import Title , { TitleSize } from "@ui/Title/title";
+import { StyledFooter, InfoWrapper, CopyrightWrapper, FooterContainer, CopyrightName, CopyrightPolicy } from "./styled";
 import TgIcon from "@assets/icons/social/TgIcon";
 import VkIcon from "@assets/icons/social/VkIcon";
 import PinterestIcon from "@assets/icons/social/PinterestIcon";
 import SkypeIcon from "@assets/icons/social/SkypeIcon";
+import InfoContacts from "@blocks/InfoContacts/InfoContacts";
 
 function Footer() {
     const socials = [
@@ -18,25 +18,7 @@ function Footer() {
         <StyledFooter>
             <InfoWrapper>
                 <FooterContainer>
-                    <InfoContacts>
-                        <Title size={TitleSize.SMALL} color='#fdfdfd' $marginBottom={17}>Компания «РумТибет»</Title>
-                        <InfoDescription>
-                            Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney.
-                        </InfoDescription>
-                        <ContactsLinks>
-                            <Link href="/">info@domain.com</Link>
-                            <Link href="/">+7 (123) 456-78-90</Link>
-                        </ContactsLinks>
-                        <SocialList>
-                            {socials.map(({ name, Icon}) => (  // eslint-disable-line no-unused-vars
-                                <SocialItem key={name}>
-                                    <SocialLink href="#" $color='ffffff'>
-                                        <Icon />
-                                    </SocialLink>
-                                </SocialItem>
-                            ))}
-                        </SocialList>
-                    </InfoContacts>
+                    <InfoContacts list={socials}/>                        
                 </FooterContainer>
             </InfoWrapper>
             <CopyrightWrapper>
