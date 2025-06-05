@@ -4,7 +4,7 @@ export const defaultTheme = {
     noteTextColor: '#f2be22',
     primaryButtonColor: '#1a3e3e',
     secondaryButtonColor: '#fdfdfd',
-    bgWhite: 'ffffff',
+    bgWhite: '#ffffff',
     bgLightGrey: '#f3f5f4',
     bgDark: '#1a3e3e',
     fontFamily: '"NextArt", "Arial", sans-serif',
