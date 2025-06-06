@@ -42,7 +42,7 @@ const getSizeValues = (size = TitleSize.MEDIUM) => {
 export const Title = styled.h1`
     padding: 0;
     margin: 0;
-    margin-bottom: ${( props ) => props.$marginBottom ? `${props.$marginBottom}px` : '40px'};
+    margin-bottom: ${( props ) => props.$marginBottom !== undefined ? `${props.$marginBottom}px` : '40px'};
     font-weight: 700;
     ${(props) => getSizeValues(props.size)};
     color: ${(props) => props.color || props.theme.primaryTextColor};

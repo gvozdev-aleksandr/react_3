@@ -13,11 +13,6 @@ export const FooterText = css`
     font-weight: 400;
 `;
 
-const NewColor = css`
-    color: ${({ theme }) => theme.bgDark};
-    background-color: ${({ theme }) => theme.bgWhite};
-`
-
 export const StyledList = styled(Ul)`
     display: flex;
     flex-direction: column;

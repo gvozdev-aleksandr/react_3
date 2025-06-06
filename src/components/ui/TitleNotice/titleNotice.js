@@ -10,3 +10,5 @@ export const TitleNotice = styled.span`
     font-weight: 400;
     color: ${(props) => props.theme.noteTextColor};
 `;
+
+export default TitleNotice;

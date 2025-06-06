@@ -2,7 +2,7 @@ import React from "react";
 import { StyledGuide, GuideContainer, ImageWrapper, StyledImg, TextWrapper, TitleWrapper, StyledText, StyledButton } from "./styled";
 import backImage from '@assets/guide/back-image.png';
 import frontImage from '@assets/guide/front-image.png';
-import { TitleNotice } from "@ui/TitleNotice/titleNotice";
+import TitleNotice from "@ui/TitleNotice/titleNotice";
 import { Title, TitleSize } from "@ui/Title/title";
 
 
