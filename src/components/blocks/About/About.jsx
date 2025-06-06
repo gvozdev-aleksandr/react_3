@@ -6,7 +6,7 @@ import { Container } from "@styled";
 
 function About() {
     return (
-        <StyledAbout>
+        <StyledAbout id="section1">
             <Container>
                 <Title size={TitleSize.BIG} color='#fdfdfd' $uppercase $marginBottom={41}>
                     Насладись прогулкой в горах с&nbsp;командой единомышленников

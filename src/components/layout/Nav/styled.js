@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Ul } from '@components/styled'
+import { Link as ScrollLink } from 'react-scroll';
 
 export const StyledNav = styled.nav`
     display: flex;
@@ -15,11 +16,18 @@ export const NavList = styled(Ul)`
 `;
 
 export const NavItem = styled.li`
-    font-size: 16px;
+    font-size: 18px;
     line-height: 100%;
+    font-weight: 600;
     `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(ScrollLink)`
+    padding: 13px 0;
     color: #fdfdfd;
     text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        color: ${({ theme }) => theme.noteTextColor};
+    }
 `;

@@ -13,6 +13,7 @@ export const PhotoItem = styled.li`
     height: 250px;
     background-color: blue; 
     clip-path: inset(0 round 0 50px 0 50px);
+    overflow: hidden;
     
     &:nth-child(2),
     &:nth-child(3) {

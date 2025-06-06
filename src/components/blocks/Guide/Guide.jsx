@@ -8,7 +8,7 @@ import { Title, TitleSize } from "@ui/Title/title";
 
 function Guide() {
     return (
-        <StyledGuide>
+        <StyledGuide id="section2">
             <GuideContainer>
                 <ImageWrapper>
                     <StyledImg src={backImage} width={350} height={400} alt='back-image' />
