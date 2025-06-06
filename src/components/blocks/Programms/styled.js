@@ -11,6 +11,7 @@ export const ProgrammsContainer = styled(Container)`
     display: grid;
     grid-template-columns: 580px 510px;
     justify-content: space-between;
+    align-items: center;
 `;
 
 const Flex = css`
@@ -47,4 +48,9 @@ export const ProggramButton = styled.button`
         color: ${(props) => props.theme.primaryButtonColor}; 
         background-color: ${(props) => props.theme.secondaryButtonColor};        
     }
+`;
+
+export const PhotoWrapper = styled.div`
+    width: 510px;
+    height: 510px;    
 `;

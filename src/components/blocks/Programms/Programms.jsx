@@ -1,9 +1,11 @@
 import React from "react";
-import { StyledProgramms, ProgrammsContainer, ProgrammsWrapper, StyledText, ProggramButton } from "./styled";
+import { StyledProgramms, ProgrammsContainer, ProgrammsWrapper, StyledText, PhotoWrapper, ProggramButton } from "./styled";
 import ProgrammList from "@ui/ProgrammItem/ProgrammList";
+import ProgramPhotoList from "../ProgramPhotoList/ProgramPhotoList";
 import Title, { TitleSize } from "@ui/Title/title";
 import TitleNotice from "@ui/TitleNotice/titleNotice";
 import { ProgrammsInfo } from "@mocks/programmsInfo";
+import { ProgramPhotos } from "@mocks/programPhotos";
 
 function Programms() {
     return (
@@ -20,6 +22,9 @@ function Programms() {
                     <ProgrammList programs={ProgrammsInfo} />
                     <ProggramButton>Стоимость программ</ProggramButton>
                 </ProgrammsWrapper>
+                <PhotoWrapper>
+                    <ProgramPhotoList photos={ProgramPhotos} />
+                </PhotoWrapper>
             </ProgrammsContainer>
         </StyledProgramms>
     );
