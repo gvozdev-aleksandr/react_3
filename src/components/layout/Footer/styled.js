@@ -8,7 +8,7 @@ export const StyledFooter = styled.footer`
 export const FooterContainer = styled(Container)`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
 `;
 
 export const FooterText = css`

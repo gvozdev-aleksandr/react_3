@@ -4,6 +4,7 @@ export const TitleSize = {
     BIG: "big",
     MEDIUM: "medium",
     SMALL: "small",
+    FOOTER: "footer",
     EXTRA_SMALL: "extra_small"
 };
 
@@ -19,6 +20,10 @@ const TitleSizeValue = {
     [TitleSize.SMALL]: {
         fontSize: '24px',
         lineHeight: '32px'
+    },
+    [TitleSize.FOOTER]: {
+        fontSize: '20px',
+        lineHeight: '24px'
     },
     [TitleSize.EXTRA_SMALL]: {
         fontSize: '18px',

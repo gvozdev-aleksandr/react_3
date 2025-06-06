@@ -5,6 +5,9 @@ import VkIcon from "@assets/icons/social/VkIcon";
 import PinterestIcon from "@assets/icons/social/PinterestIcon";
 import SkypeIcon from "@assets/icons/social/SkypeIcon";
 import InfoContacts from "@blocks/InfoContacts/InfoContacts";
+import InfoList from "@blocks/InfoList/InfoList";
+import { Services } from "@mocks/services";
+import { GuideInfo } from "@mocks/guideInfo";
 
 function Footer() {
     const socials = [
@@ -18,7 +21,9 @@ function Footer() {
         <StyledFooter>
             <InfoWrapper>
                 <FooterContainer>
-                    <InfoContacts list={socials}/>                        
+                    <InfoContacts list={socials} />
+                    <InfoList list={Services} title={'Наши услуги'}/>
+                    <InfoList list={GuideInfo} title={'Важно для путешествий'} marginRight={'0'}/>                        
                 </FooterContainer>
             </InfoWrapper>
             <CopyrightWrapper>

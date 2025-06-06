@@ -5,7 +5,7 @@ import Title , { TitleSize } from "@ui/Title/title";
 function InfoContacts({list}) {
     return (
         <ContactsWrapper>
-            <Title size={TitleSize.SMALL} color='#fdfdfd' $marginBottom={17}>Компания «РумТибет»</Title>
+            <Title size={TitleSize.FOOTER} color='#f3f5f4' $marginBottom={17}>Компания «РумТибет»</Title>
             <InfoDescription>
                 Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney.
             </InfoDescription>
