@@ -6,6 +6,7 @@ import About from "@blocks/About/About";
 import Guide from "@blocks/Guide/Guide";
 import Footer from "../Footer/Footer";
 import Programms from "@blocks/Programms/Programms";
+import Popular from "@blocks/Popular/Popular";
 
 function PageWrapper({children}) {
     return (
@@ -16,6 +17,7 @@ function PageWrapper({children}) {
                 <About />
                 <Guide />
                 <Programms />
+                <Popular />
                 {children}
                 <Footer />
             </Main>

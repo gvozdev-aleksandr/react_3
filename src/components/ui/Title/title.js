@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { css } from "styled-components";
 
 export const TitleSize = {
@@ -11,23 +12,28 @@ export const TitleSize = {
 const TitleSizeValue = {
     [TitleSize.BIG]: {
         fontSize: '50px',
-        lineHeight: '75px'
+        lineHeight: '75px',
+        tag: 'h1'
     },
     [TitleSize.MEDIUM]: {
         fontSize: '32px',
-        lineHeight: '38px'
+        lineHeight: '38px',
+        tag: 'h2'
     },
     [TitleSize.SMALL]: {
         fontSize: '24px',
-        lineHeight: '32px'
+        lineHeight: '32px',
+        tag: 'h3'
     },
     [TitleSize.FOOTER]: {
         fontSize: '20px',
-        lineHeight: '24px'
+        lineHeight: '24px',
+        tag: 'h4'
     },
     [TitleSize.EXTRA_SMALL]: {
         fontSize: '18px',
-        lineHeight: '20px'
+        lineHeight: '20px',
+        tag: 'h5'
     }
 };
 
@@ -39,7 +45,10 @@ const getSizeValues = (size = TitleSize.MEDIUM) => {
     `;
 };
 
-export const Title = styled.h1`
+export const Title = styled(({ size, as, ...props }) => {
+  const Tag = as || TitleSizeValue[size]?.tag || "h2";
+  return React.createElement(Tag, props);
+})`
     padding: 0;
     margin: 0;
     margin-bottom: ${( props ) => props.$marginBottom !== undefined ? `${props.$marginBottom}px` : '40px'};

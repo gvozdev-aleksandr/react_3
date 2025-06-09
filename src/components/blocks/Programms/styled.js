@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Container, Ul } from "@styled";
+import { Container } from "@styled";
 
 export const StyledProgramms = styled.section`
     padding-top: 80px;
