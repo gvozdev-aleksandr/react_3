@@ -13,15 +13,18 @@ function Popular() {
                 <TitleWrapper>
                     <TitleNotice>по версии отдыхающих</TitleNotice>
                     <Title $marginBottom={0}>Популярные направления</Title>
-                </TitleWrapper>
-                <PopularButton>Рейтинг направлений</PopularButton>
+                </TitleWrapper>                
                 <SwiperWrapper>
                     <Swiper                        
                         spaceBetween={20}
-                        slidesPerView="auto"
+                        //slidesPerView="auto"
+                        breakpoints={{
+                            380: { slidesPerView: 1 },    // Но здесь фиксированное количество
+                            1920: { slidesPerView: 3 }
+                        }}
                         freeMode={true}
                         grabCursor={true}                        
-                        loop={true}                   
+                        //loop={true}                   
                     >
                         {PopularList.map((item) => (
                             <SwiperSlide key={item.id}>
@@ -30,6 +33,7 @@ function Popular() {
                         ))}
                     </Swiper>
                 </SwiperWrapper>
+                <PopularButton>Рейтинг направлений</PopularButton>
             </PopularContainer>
         </StyledPopular>
     );

@@ -11,27 +11,42 @@ export const TitleSize = {
 
 const TitleSizeValue = {
     [TitleSize.BIG]: {
-        fontSize: '50px',
-        lineHeight: '75px',
+        fontSize: {
+            mobile: '28px',
+            desktop: '50px'
+        },
+        lineHeight: 1.5,
         tag: 'h1'
     },
     [TitleSize.MEDIUM]: {
-        fontSize: '32px',
-        lineHeight: '38px',
+        fontSize: {
+            mobile: '24px',
+            desktop: '32px'
+        },
+        lineHeight: 1.2,
         tag: 'h2'
     },
     [TitleSize.SMALL]: {
-        fontSize: '24px',
-        lineHeight: '32px',
+        fontSize: {
+            mobile: '18px',
+            desktop: '24px'
+        },
+        lineHeight: 1.2,
         tag: 'h3'
     },
     [TitleSize.FOOTER]: {
-        fontSize: '20px',
+        fontSize: {
+            mobile: '20px',
+            desktop: '20px'
+        },
         lineHeight: '24px',
         tag: 'h4'
     },
     [TitleSize.EXTRA_SMALL]: {
-        fontSize: '18px',
+        fontSize: {
+            mobile: '18px',
+            desktop: '18px'
+        },
         lineHeight: '20px',
         tag: 'h5'
     }
@@ -40,18 +55,21 @@ const TitleSizeValue = {
 const getSizeValues = (size = TitleSize.MEDIUM) => {
     const values = TitleSizeValue[size];
     return css`
-        font-size: ${values.fontSize};
+        font-size: ${values.fontSize.mobile};
+        @media(min-width: ${({ theme }) => theme.desktopWidth}) {
+            font-size: ${values.fontSize.desktop};
+        }
         line-height: ${values.lineHeight};
     `;
 };
 
 export const Title = styled(({ size, as, ...props }) => {
-  const Tag = as || TitleSizeValue[size]?.tag || "h2";
-  return React.createElement(Tag, props);
+    const Tag = as || TitleSizeValue[size]?.tag || "h2";
+    return React.createElement(Tag, props);
 })`
     padding: 0;
     margin: 0;
-    margin-bottom: ${( props ) => props.$marginBottom !== undefined ? `${props.$marginBottom}px` : '40px'};
+    margin-bottom: ${(props) => props.$marginBottom !== undefined ? `${props.$marginBottom}px` : '40px'};
     font-weight: 700;
     ${(props) => getSizeValues(props.size)};
     color: ${(props) => props.color || props.theme.primaryTextColor};

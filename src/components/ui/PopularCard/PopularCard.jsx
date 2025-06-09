@@ -21,7 +21,7 @@ function PopularCard({ src, name, description, text, price, star }) {
                         <Price>{price}</Price>
                     </TitleWrapper>
                     <StyledText>{text}</StyledText>
-                    <Button>'Программа тура'</Button>
+                    <Button>Программа тура</Button>
                 </TextWrapper>
             </Overlay>
         </CardWrapper>

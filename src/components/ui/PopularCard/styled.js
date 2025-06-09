@@ -41,11 +41,16 @@ export const StarWrapper = styled.p`
 export const CardWrapper = styled.div`
     position: relative;
     clip-path: inset(0 round 32px);
-    min-width: 380px;
-    height: 500px;
-    background-color: blue;
+    min-width: 285px;
+    height: 400px;
     color: ${({ theme }) => theme.secondaryTextColor};
     overflow: hidden;
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        min-width: 380px;
+        height: 500px;  
+    }
+      
 
     &:hover ${TextWrapper} {
         transform: translateY(0);
