@@ -6,19 +6,23 @@ export const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 20px 32px;    
+    padding: 20px 24px;    
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(2px);
     bottom: 0;
     left: 0;
     right: 0;
-    transform: translateY(calc(100% - 90px));
-    transition: transform 0.6s cubic-bezier(0.16, 0.77, 0.3, 1);
+    transform: translateY(calc(100% - 70px));    
     will-change: transform;    
     
     clip-path: inset(0 0 calc(100% - 120px) 0);
     transition: transform 1.6s cubic-bezier(0.16, 0.77, 0.3, 1), 
                 clip-path 1.6s cubic-bezier(0.16, 0.77, 0.3, 1);
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        padding: 20px 32px; 
+        transform: translateY(calc(100% - 90px)); 
+    }  
 `;
 
 export const StarWrapper = styled.p`
@@ -41,7 +45,7 @@ export const StarWrapper = styled.p`
 export const CardWrapper = styled.div`
     position: relative;
     clip-path: inset(0 round 32px);
-    min-width: 285px;
+    width: 285px;
     height: 400px;
     color: ${({ theme }) => theme.secondaryTextColor};
     overflow: hidden;
@@ -49,13 +53,15 @@ export const CardWrapper = styled.div`
     @media (min-width: ${({ theme }) => theme.desktopWidth}) {
         min-width: 380px;
         height: 500px;  
-    }
-      
+    }      
 
     &:hover ${TextWrapper} {
         transform: translateY(0);
-        clip-path: inset(0 0 0 0);
-        padding: 30px 32px 20px;        
+        clip-path: inset(0 0 0 0);         
+        
+        @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+            padding: 30px 32px 20px;             
+        } 
     }
 
     &:hover ${StarWrapper} {
@@ -71,8 +77,7 @@ export const PopularImage = styled(Img)`
 
 export const Overlay = styled.div`
     position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 40%);
+    inset: 0;    
     display: flex;
     align-items: flex-end;
 `;
@@ -84,8 +89,7 @@ export const StarIcon = styled.span`
     height: 24px;
 `;
 
-export const StarNumber = styled.span`
-    font-size: 14px;
+export const StarNumber = styled.span`    
     line-height: 18px;
     font-weight: 700;
     color: ${({ theme }) => theme.primaryButtonColor};
@@ -93,37 +97,52 @@ export const StarNumber = styled.span`
 
 export const TitleWrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr 86px;
+    grid-template-columns: 1fr 67px;
+    align-items: center;
     column-gap: 20px;
     margin-bottom: 38px;
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        grid-template-columns: 1fr 86px; 
+    }    
 `;
 
 export const TitleDescription = styled.span`
-    grid-row: 2 / 3;
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 400;     
+    display: none;
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        display: block;
+        grid-row: 2 / 3;
+        padding: 0;
+        margin: 0;        
+        line-height: 18px;
+        font-weight: 400; 
+    }          
 `;
 
-export const Price = styled.span`
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
+export const Price = styled.span`    
     align-self: center;
     text-align: center;
-    padding: 8px 16px;;
+    padding: 6px 12px;
     margin: 0;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 4px;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 700;    
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;  
+    
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        padding: 8px 16px;
+        font-size: 20px;
+        line-height: 24px;
+    }  
 `;
 
-export const StyledText = styled.p`
+export const StyledText = styled.p`    
     padding: 0;
-    margin: 0;
+    margin: 0;     
     margin-bottom: auto;    
 `;
 

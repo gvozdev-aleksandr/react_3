@@ -8,7 +8,7 @@ import { Title, TitleSize } from "@ui/Title/title";
 
 function Guide() {
     return (
-        <StyledGuide id="section2">
+        <StyledGuide id="guide">
             <GuideContainer>
                 <ImageWrapper>
                     <StyledImg src={backImage} width={350} height={400} alt='back-image' />
@@ -17,7 +17,7 @@ function Guide() {
                 <TextWrapper>
                     <TitleWrapper>
                         <TitleNotice>о нашем походе</TitleNotice>
-                        <Title size={TitleSize.MEDIUM}>Исследуйте все горные массивы мира вместе с нами</Title>
+                        <Title size={TitleSize.MEDIUM} $marginBottom={0}>Исследуйте все горные массивы мира вместе с нами</Title>
                     </TitleWrapper>
                     <StyledText>
                         Его корни уходят в один фрагмент классической латыни 45 года н.э.,&nbsp;то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.

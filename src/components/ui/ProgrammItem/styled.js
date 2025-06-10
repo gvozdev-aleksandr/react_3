@@ -4,16 +4,23 @@ import { Ul } from "@styled";
 export const StyledList = styled(Ul)`
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        gap: 40px;
+    } 
 `;
 
 export const StyledItem = styled.li`
     padding: 0;
     margin: 0;
-    display: flex;
-    align-items: center;
+    display: flex;    
     gap: 16px;
     min-height: 64px;
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        align-items: center;
+    } 
 `;
 
 export const IconWrapper = styled.div`
@@ -26,9 +33,6 @@ export const IconWrapper = styled.div`
 
 export const Description = styled.p`
     padding: 0;
-    margin: 0;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
+    margin: 0;    
     color: #000000;
 `;

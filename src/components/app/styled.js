@@ -33,10 +33,10 @@ export const GlobalStyle = createGlobalStyle`
     body {        
         position: relative;
         min-height: 100%;
-        font-family: ${(props) => props.theme.fontFamily};
-        font-size: ${(props) => props.theme.primaryFontSize};
-        line-height: 20px;
+        font-family: ${({ theme }) => theme.fontFamily};
+        font-size: ${({ theme }) => theme.primaryFontSize};
+        line-height: ${({ theme }) => theme.primaryLineHeight};
         font-weight: 400;
-        color: ${(props) => props.theme.primaryTextColor};
+        color: ${({ theme }) => theme.primaryTextColor};
     }
 `;

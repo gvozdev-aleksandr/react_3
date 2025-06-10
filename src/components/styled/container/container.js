@@ -2,14 +2,18 @@ import styled from "styled-components";
 
 const Container = styled.div`
     width: ${({ theme }) => theme.mobileWidth};
-    padding-left: ${({ theme }) => theme.mobilePadding};
-    padding-right: ${({ theme }) => theme.mobilePadding};
+    padding-top: ${({ theme }) => theme.mobilePaddingY};
+    padding-bottom: ${({ theme }) => theme.mobilePaddingY};
+    padding-left: ${({ theme }) => theme.mobilePaddingX};
+    padding-right: ${({ theme }) => theme.mobilePaddingX};
     margin: 0 auto;
 
     @media (min-width: ${({ theme }) => theme.desktopWidth}) {
         width: ${({ theme }) => theme.desktopWidth};
-        padding-left: ${({ theme }) => theme.desktopPadding};
-        padding-right: ${({ theme }) => theme.desktopPadding};
+        padding-top: ${({ theme }) => theme.desktopPaddingTop};
+        padding-bottom: ${({ theme }) => theme.desktopPaddingBottom};
+        padding-left: ${({ theme }) => theme.desktopPaddingX};
+        padding-right: ${({ theme }) => theme.desktopPaddingX};
     }    
 `;
 

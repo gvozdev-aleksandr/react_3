@@ -9,7 +9,7 @@ import { ProgramPhotos } from "@mocks/programPhotos";
 
 function Programms() {
     return (
-        <StyledProgramms id="section3">
+        <StyledProgramms id="programm">
             <ProgrammsContainer>
                 <ProgrammsWrapper>
                     <div>

@@ -6,6 +6,9 @@ export const StyledHeader = styled.header`
 `;
 
 export const HeaderContainer = styled(Container)`
+    position: relative;
     display: flex;
     justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
 `;

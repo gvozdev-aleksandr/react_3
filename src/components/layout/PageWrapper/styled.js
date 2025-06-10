@@ -10,8 +10,12 @@ export const BgImg = styled(Img)`
     position: absolute;
     top: 0;
     width: 100%;
-    height: 985px;
+    height: 600px;
     object-fit: cover;
     background-color: #7a8b99;
     z-index: -1;
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        height: 985px;
+    } 
 `;

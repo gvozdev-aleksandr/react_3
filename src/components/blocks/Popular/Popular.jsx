@@ -8,7 +8,7 @@ import { PopularList } from "@mocks/popularList";
 
 function Popular() {
     return (
-        <StyledPopular id='section4'>
+        <StyledPopular id='popular'>
             <PopularContainer>
                 <TitleWrapper>
                     <TitleNotice>по версии отдыхающих</TitleNotice>

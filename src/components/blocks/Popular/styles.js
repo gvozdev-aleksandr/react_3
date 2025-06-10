@@ -1,9 +1,7 @@
 import styled, { css } from "styled-components";
 import { Container } from "@styled";
 
-export const StyledPopular = styled.section`
-    padding-top: 80px;
-    padding-bottom: 100px;
+export const StyledPopular = styled.section`    
     background-color: ${({ theme }) => theme.bgWhite};
 `;
 
@@ -15,7 +13,11 @@ const Flex = css`
 
 export const PopularContainer = styled(Container)`
     ${Flex};
-    gap: 50px;
+    gap: 32px;
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        gap: 50px; 
+    }  
 `;
 
 export const TitleWrapper = styled.div`
@@ -28,10 +30,14 @@ export const PopularButton = styled.button`
     line-height: 20px;
     letter-spacing: 0.02em;
     background-color: ${({ theme }) => theme.primaryButtonColor};
-    padding: 16px 36px;
     border: 1px solid ${({ theme }) => theme.primaryButtonColor};
     border-radius: 4px;
     cursor: pointer;
+    padding: 12px 24px;
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        padding: 16px 36px;
+    }  
 
     &:hover {
         color: ${({ theme }) => theme.primaryButtonColor}; 
@@ -50,11 +56,5 @@ export const SwiperWrapper = styled.div`
     .swiper-wrapper {
         display: flex;
         flex-direction: row;
-    }
-  
-    .swiper-slide {
-        width: auto; 
-        height: auto;
-        flex-shrink: 0; /* Предотвращает сжатие слайдов */
-    }
+    }    
 `;

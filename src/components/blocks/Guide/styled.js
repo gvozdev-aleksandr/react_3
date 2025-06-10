@@ -2,36 +2,61 @@ import styled from "styled-components";
 import { Img, Container } from "@styled";
 
 export const StyledGuide = styled.section`    
-    padding-top: 100px;
-    padding-bottom: 100px;
     background-color: ${(props) => props.theme.bgWhite};
 `;
 
 export const GuideContainer = styled(Container)`
     display: grid;
-    grid-template-columns: 480px 1fr;
-    gap: 120px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        padding-top: 100px;
+        grid-template-columns: 480px 1fr;
+        gap: 120px;
+    }  
 `;
 
 export const ImageWrapper = styled.div`
+    grid-row: 2 / 3;
     position: relative;
-    min-height: 526px;
+    min-height: 416px;
+    
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        grid-template-columns: 480px 1fr;
+        gap: 120px;
+        min-height: 526px;
+    }  
 `;
 
 export const StyledImg = styled(Img)`
     position: absolute;
-    top: ${({ $isFront }) => $isFront ? '126px' : '0'};
-    left: ${({ $isFront }) => $isFront ? '130px' : '0'};
-    width: 350px;
-    height: 400px;
+    top: 0;
+    left: 0;
+    width: 358px;
+    height: 416px;
     border-radius: 24px;
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        width: 350px;
+        height: 400px;
+        top: ${({ $isFront }) => $isFront ? '126px' : '0'};
+        left: ${({ $isFront }) => $isFront ? '130px' : '0'};
+    }  
 `;
 
-export const TextWrapper = styled.div`    
-    padding: 64px 0;
-    font-size: 18px;
-    line-height: 150%;
-    color: ${(props) => props.theme.primaryTextColor}
+export const TextWrapper = styled.div`  
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 16px;
+    line-height: 150%;    
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        padding: 64px 0;
+        font-size: 18px; 
+        gap: 40px;       
+    } 
 `;
 
 export const TitleWrapper = styled.div`
@@ -41,14 +66,12 @@ export const TitleWrapper = styled.div`
 
 export const StyledText = styled.p`
     padding: 0;
-    margin: 0;
-    margin-bottom: 40px;
-    font-size: 20px;
-    line-height: 150%;
+    margin: 0;    
     font-weight: 400;
 `;
 
-export const StyledButton = styled.button`    
+export const StyledButton = styled.button`  
+    align-self: center;
     padding: 16px 33px;
     text-align: center;
     color: ${(props) => props.theme.secondaryButtonColor};

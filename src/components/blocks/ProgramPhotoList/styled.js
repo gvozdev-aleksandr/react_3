@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { Ul, Img } from "@styled";
 
-export const PhotosList = styled(Ul)`
+export const PhotosList = styled(Ul)`    
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    align-items: center;
+    align-items: center;        
 `;
 
 export const PhotoItem = styled.li`

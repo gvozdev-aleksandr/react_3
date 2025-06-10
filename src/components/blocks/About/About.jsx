@@ -1,18 +1,17 @@
 import React from "react";
 import Title, { TitleSize } from "@ui/Title/title";
 import Form from "../Form/Form";
-import { StyledAbout } from "./styled";
-import { Container } from "@styled";
+import { StyledAbout, StyledContainer } from "./styled";
 
 function About() {
     return (
-        <StyledAbout id="section1">
-            <Container>
+        <StyledAbout id="about">
+            <StyledContainer>
                 <Title size={TitleSize.BIG} color='#fdfdfd' $uppercase $marginBottom={41}>
-                    Насладись прогулкой в горах с&nbsp;командой единомышленников
+                    Насладись прогулкой в горы с&nbsp;командой единомышленников
                 </Title>
                 <Form />
-            </Container>
+            </StyledContainer>
         </StyledAbout>
     );
 }
