@@ -19,19 +19,18 @@ function Footer() {
 
     return (
         <StyledFooter>
-            <InfoWrapper>
-                <FooterContainer>
+            <FooterContainer>
+                <InfoWrapper>
                     <InfoContacts list={socials} />
                     <InfoList list={Services} title={'Наши услуги'}/>
                     <InfoList list={GuideInfo} title={'Важно для путешествий'} marginRight={'0'}/>                        
-                </FooterContainer>
-            </InfoWrapper>
-            <CopyrightWrapper>
-                <FooterContainer>
+                </InfoWrapper>
+            
+                <CopyrightWrapper>
                     <CopyrightName>ИП Константинопольский К.К., 2023</CopyrightName>
                     <CopyrightPolicy href="/">Политика обработки персональных данных</CopyrightPolicy>
-                </FooterContainer>
-            </CopyrightWrapper>
+                </CopyrightWrapper>
+            </FooterContainer>
         </StyledFooter>
     );
 }

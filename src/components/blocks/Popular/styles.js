@@ -50,7 +50,7 @@ export const SwiperWrapper = styled.div`
 
     .swiper {
         width: 100%;
-        overflow: visible;   
+        overflow: hidden;   
     }
 
     .swiper-wrapper {

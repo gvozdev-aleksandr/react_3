@@ -16,6 +16,7 @@ function MainNav() {
     const [isOpen, setIsOpen] = useState(false); 
     
     useEffect(() => {
+        if (typeof window === 'undefined') return;
         const mediaQuery = window.matchMedia(`(min-width: 1980px)`);
 
         const handleMediaChange = (e) => {
@@ -43,7 +44,7 @@ function MainNav() {
     }
 
     const handleNavLinkClick = () => {        
-        const mediaQuery = window.matchMedia(`(min-width: 1980px`);
+        const mediaQuery = window.matchMedia(`(min-width: 1980px)`);
         if (!mediaQuery.matches) {
             setIsOpen(false);
         }
@@ -68,7 +69,11 @@ function MainNav() {
                 ))}
             </NavList>
             <NavButton onClick={handleOnClick}>Консультация</NavButton>
-            <OpenButton $isOpen={isOpen} onClick={toggleClick}>
+            <OpenButton
+                $isOpen={isOpen}
+                onClick={toggleClick}
+                aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
+            >
                 {isOpen ? <CloseIcon /> : <OpenIcon />}
             </OpenButton>
         </StyledNav>

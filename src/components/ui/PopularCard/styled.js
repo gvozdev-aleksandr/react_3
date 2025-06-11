@@ -45,7 +45,7 @@ export const StarWrapper = styled.p`
 export const CardWrapper = styled.div`
     position: relative;
     clip-path: inset(0 round 32px);
-    width: 285px;
+    min-width: 285px;
     height: 400px;
     color: ${({ theme }) => theme.secondaryTextColor};
     overflow: hidden;

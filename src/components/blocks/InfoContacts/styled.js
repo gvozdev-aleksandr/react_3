@@ -11,19 +11,27 @@ export const FooterText = css`
 export const ContactsWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    min-height: 263px;
-    padding-right: 24px;
-    margin-right: 20px;
+    max-width: 480px;
+       
     color: ${({ theme }) => theme.bgWhite};
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        min-height: 263px; 
+        padding-right: 24px;
+        margin-right: 20px;   
+    } 
 `;
 
 export const InfoDescription = styled.p`
     ${FooterText};
-    display: block;
-    max-width: 480px;
+    display: block;    
     margin: 0;    
-    margin-bottom: auto;
+    margin-bottom: 30px;
     line-height: 20px;
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        margin-bottom: auto;  
+    } 
 `;
 
 export const ContactsLinks = styled.div`    

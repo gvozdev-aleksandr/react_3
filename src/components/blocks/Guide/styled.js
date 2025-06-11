@@ -24,6 +24,7 @@ export const ImageWrapper = styled.div`
     
     @media (min-width: ${({ theme }) => theme.desktopWidth}) {
         grid-template-columns: 480px 1fr;
+        grid-row: 1 / 2;
         gap: 120px;
         min-height: 526px;
     }  

@@ -15,16 +15,12 @@ function Popular() {
                     <Title $marginBottom={0}>Популярные направления</Title>
                 </TitleWrapper>                
                 <SwiperWrapper>
-                    <Swiper                        
+                    <Swiper                                              
                         spaceBetween={20}
-                        //slidesPerView="auto"
-                        breakpoints={{
-                            380: { slidesPerView: 1 },    // Но здесь фиксированное количество
-                            1920: { slidesPerView: 3 }
-                        }}
+                        slidesPerView="auto"                        
                         freeMode={true}
                         grabCursor={true}                        
-                        //loop={true}                   
+                        loop={true}                   
                     >
                         {PopularList.map((item) => (
                             <SwiperSlide key={item.id}>

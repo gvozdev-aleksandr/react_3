@@ -43,7 +43,7 @@ export const StyledItem = styled.li`
 export const StyledLink = styled.a`
     ${FooterText};
     position: relative;
-    
+    display: block;
     cursor: pointer;
 
     &::before {
