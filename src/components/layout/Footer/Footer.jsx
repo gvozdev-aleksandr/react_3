@@ -24,8 +24,7 @@ function Footer() {
                     <InfoContacts list={socials} />
                     <InfoList list={Services} title={'Наши услуги'}/>
                     <InfoList list={GuideInfo} title={'Важно для путешествий'} marginRight={'0'}/>                        
-                </InfoWrapper>
-            
+                </InfoWrapper>            
                 <CopyrightWrapper>
                     <CopyrightName>ИП Константинопольский К.К., 2023</CopyrightName>
                     <CopyrightPolicy href="/">Политика обработки персональных данных</CopyrightPolicy>
