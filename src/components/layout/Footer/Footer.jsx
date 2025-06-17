@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledFooter, InfoWrapper, CopyrightWrapper, FooterContainer, CopyrightName, CopyrightPolicy } from "./styled";
+import { StyledFooter, FooterContainer, InfoWrapper, CopyrightContainer, CopyrightWrapper, CopyrightName, CopyrightPolicy } from "./styled";
 import TgIcon from "@assets/icons/social/TgIcon";
 import VkIcon from "@assets/icons/social/VkIcon";
 import PinterestIcon from "@assets/icons/social/PinterestIcon";
@@ -22,14 +22,16 @@ function Footer() {
             <FooterContainer>
                 <InfoWrapper>
                     <InfoContacts list={socials} />
-                    <InfoList list={Services} title={'Наши услуги'}/>
-                    <InfoList list={GuideInfo} title={'Важно для путешествий'} marginRight={'0'}/>                        
-                </InfoWrapper>            
+                    <InfoList list={Services} title={'Наши услуги'} />
+                    <InfoList list={GuideInfo} title={'Важно для путешествий'} marginRight={'0'} />
+                </InfoWrapper>
+            </FooterContainer>
+            <CopyrightContainer>
                 <CopyrightWrapper>
                     <CopyrightName>ИП Константинопольский К.К., 2023</CopyrightName>
                     <CopyrightPolicy href="/">Политика обработки персональных данных</CopyrightPolicy>
                 </CopyrightWrapper>
-            </FooterContainer>
+            </CopyrightContainer>
         </StyledFooter>
     );
 }

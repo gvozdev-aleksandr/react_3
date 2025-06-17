@@ -7,8 +7,9 @@ import Guide from "@blocks/Guide/Guide";
 import Footer from "../Footer/Footer";
 import Programms from "@blocks/Programms/Programms";
 import Popular from "@blocks/Popular/Popular";
+import Gallery from "@blocks/Gallery/Gallery";
 
-function PageWrapper({children}) {
+function PageWrapper() {
     return (
         <>
             <Main>
@@ -18,7 +19,7 @@ function PageWrapper({children}) {
                 <Guide />
                 <Programms />
                 <Popular />
-                {children}
+                <Gallery />                
                 <Footer />
             </Main>
         </>
