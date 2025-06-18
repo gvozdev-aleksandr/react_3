@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { StyledForm, SubmitButton, InputWrapper } from "./styled";
+import { StyledForm, InputWrapper } from "./styled";
 import CustomSelect from "@ui/CustomSelect/CustomSelect";
+import Button from '@ui/Button/Button';
 
 
 const places = [
@@ -48,7 +49,7 @@ function Form() {
                 <CustomSelect name="place2" options={places2} value={formData.place2} onChange={handleChange} />
                 <CustomSelect name="place3" options={places3} value={formData.place3} onChange={handleChange} />
             </InputWrapper>            
-            <SubmitButton type="submit">Найти программу</SubmitButton>
+            <Button white={true} type="submit">Найти программу</Button>
         </StyledForm>
     );
 }

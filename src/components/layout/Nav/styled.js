@@ -87,28 +87,6 @@ export const NavLink = styled(ScrollLink)`
     }
 `;
 
-export const NavButton = styled.button`
-    display: none;
-    color: ${({ theme }) => theme.secondaryTextColor};
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    background-color: ${({ theme }) => theme.primaryButtonColor};
-    padding: 11px 23px;
-    border: 1px solid ${({ theme }) => theme.primaryButtonColor};
-    border-radius: 4px;
-    cursor: pointer;
-
-    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
-        display: block;
-    }  
-
-    &:hover {
-        color: ${({ theme }) => theme.primaryButtonColor}; 
-        background-color: ${({ theme }) => theme.secondaryButtonColor};        
-    }
-`;
-
 export const OpenButton = styled.button`
     position: absolute;    
     right: 16px;

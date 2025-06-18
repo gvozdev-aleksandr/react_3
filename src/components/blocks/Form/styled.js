@@ -20,23 +20,3 @@ export const InputWrapper = styled.div`
         gap: 24px;     
     } 
 `;
-
-export const SubmitButton = styled.button`
-    min-width: 213px;
-    padding: 16px;
-    text-align: center;
-    color: ${(props) => props.theme.primaryButtonColor};
-    background-color: ${(props) => props.theme.secondaryButtonColor};
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-
-    &:hover {
-        color: ${(props) => props.theme.secondaryButtonColor};
-        background-color: ${(props) => props.theme.primaryButtonColor};
-    }
-`;

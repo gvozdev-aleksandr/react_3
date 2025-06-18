@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledGuide, GuideContainer, ImageWrapper, StyledImg, TextWrapper, TitleWrapper, StyledText, StyledButton } from "./styled";
+import { StyledGuide, GuideContainer, ImageWrapper, StyledImg, TextWrapper, TitleWrapper, StyledText, GuideButton } from "./styled";
 import backImage from '@assets/guide/back-image.png';
 import frontImage from '@assets/guide/front-image.png';
 import TitleNotice from "@ui/TitleNotice/titleNotice";
@@ -22,7 +22,7 @@ function Guide() {
                     <StyledText>
                         Его корни уходят в один фрагмент классической латыни 45 года н.э.,&nbsp;то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.
                     </StyledText>
-                    <StyledButton>Программа тура</StyledButton>
+                    <GuideButton>Программа тура</GuideButton>
                 </TextWrapper>
             </GuideContainer>
         </StyledGuide>

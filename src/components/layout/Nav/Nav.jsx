@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { StyledNav, NavList, NavItem, NavLink, NavButton, OpenButton } from "./styled";
+import { StyledNav, NavList, NavItem, NavLink, OpenButton } from "./styled";
 import OpenIcon from "@assets/icons/open-icon.svg?react";
 import CloseIcon from "@assets/icons/close-icon.svg?react";
+import Button from "@ui/Button/Button";
 
 const navItems = [
-    {path: '/about', label: 'Главная', id: 'about'},
-    {path: '/guide', label: 'Про гида', id: 'guide'},
-    {path: '/programm', label: 'Программа тура', id: 'programm'},
-    {path: '/popular', label: 'Стоимость', id: 'popular'},
-    {path: '/blog', label: 'Блог', id: 'section1'},
-    {path: '/contacts', label: 'Контакты', id: 'section1'}
+    {label: 'Главная', id: 'about'},
+    {label: 'Про гида', id: 'guide'},
+    {label: 'Программа тура', id: 'programm'},
+    {label: 'Стоимость', id: 'popular'},
+    {label: 'Блог', id: 'section1'},
+    {label: 'Контакты', id: 'footer'}
 ];
 
 function MainNav() {
@@ -54,7 +55,7 @@ function MainNav() {
         <StyledNav $isOpen={isOpen}>
             <NavList $isOpen={isOpen}>
                 {navItems?.length > 0 && navItems.map((item) => (
-                    <NavItem key={item.path}>
+                    <NavItem key={item.id}>
                         <NavLink
                             onClick={handleNavLinkClick}
                             $isOpen={isOpen}
@@ -68,7 +69,7 @@ function MainNav() {
                     </NavItem>
                 ))}
             </NavList>
-            <NavButton onClick={handleOnClick}>Консультация</NavButton>
+            <Button secondary={true} onClick={handleOnClick}>Консультация</Button>
             <OpenButton
                 $isOpen={isOpen}
                 onClick={toggleClick}

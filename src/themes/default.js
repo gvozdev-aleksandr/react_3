@@ -11,6 +11,7 @@ export const defaultTheme = {
     fontFamily: '"NextArt", "Arial", sans-serif',
     primaryFontSize:  '14px',
     primaryLineHeight: '20px',
+    letterSpacing: '0.02em',
     //width
     desktopWidth: '1920px',
     mobileWidth: '390px',

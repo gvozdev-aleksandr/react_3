@@ -1,10 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { StyledPopular, PopularContainer, TitleWrapper, PopularButton, SwiperWrapper } from "./styles";
+import { StyledPopular, PopularContainer, TitleWrapper, SwiperWrapper } from "./styles";
 import Title from "@ui/Title/title";
 import TitleNotice from "@ui/TitleNotice/titleNotice";
 import PopularCard from "@ui/PopularCard/PopularCard";
 import { PopularList } from "@mocks/popularList";
+import Button from "@ui/Button/Button";
 
 function Popular() {
     return (
@@ -29,7 +30,7 @@ function Popular() {
                         ))}
                     </Swiper>
                 </SwiperWrapper>
-                <PopularButton>Рейтинг направлений</PopularButton>
+                <Button>Рейтинг направлений</Button>
             </PopularContainer>
         </StyledPopular>
     );

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Container, Ul, Img } from "@styled";
 import { GALLERY_ITEM } from "./const";
 import { Swiper } from 'swiper/react';
+import { StyledButton } from "@ui/Button/styled";
 
 export const StyledGallery = styled.section`
     background-color: ${({ theme }) => theme.bgWhite};    
@@ -73,21 +74,7 @@ export const MobileSwiper = styled(Swiper)`
     }
 `;
 
-export const GalleryButton = styled.button`
-    display: block;
-    color: ${({ theme }) => theme.secondaryTextColor};
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    background-color: ${({ theme }) => theme.primaryButtonColor};
-    padding: 16px 36px;
-    margin: 0 auto;
-    border: 1px solid ${({ theme }) => theme.primaryButtonColor};
-    border-radius: 4px;
-    cursor: pointer;
-
-    &:hover {
-        color: ${({ theme }) => theme.primaryButtonColor}; 
-        background-color: ${({ theme }) => theme.secondaryButtonColor};        
-    }
+export const GalleryButton = styled(StyledButton)`
+    display: block;    
+    margin: 0 auto; 
 `;

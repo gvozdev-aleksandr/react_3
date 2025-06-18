@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Img, Container } from "@styled";
+import { StyledButton } from "../../ui/Button/styled";
 
 export const StyledGuide = styled.section`    
     background-color: ${(props) => props.theme.bgWhite};
@@ -71,23 +72,15 @@ export const StyledText = styled.p`
     font-weight: 400;
 `;
 
-export const StyledButton = styled.button`  
-    align-self: center;
-    padding: 16px 33px;
-    text-align: center;
-    color: ${(props) => props.theme.secondaryButtonColor};
-    background-color: ${(props) => props.theme.primaryButtonColor};
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
+export const GuideButton = styled(StyledButton)`  
+    align-self: center;        
+    border: none;    
+
+    @media (min-width: ${({ theme }) => theme.desktopWidth}) {
+        align-self: flex-start;      
+    } 
 
     &:hover {
-        color: ${(props) => props.theme.primaryButtonColor};
-        background-color: ${(props) => props.theme.secondaryButtonColor};
         outline: 2px solid ${(props) => props.theme.primaryButtonColor};
     }
 `;

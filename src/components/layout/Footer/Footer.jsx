@@ -18,7 +18,7 @@ function Footer() {
     ];
 
     return (
-        <StyledFooter>
+        <StyledFooter id="footer">
             <FooterContainer>
                 <InfoWrapper>
                     <InfoContacts list={socials} />
