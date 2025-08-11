@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { InputTemplate } from '@styled';
 
 export const StyledForm = styled.form`
     display: flex;
@@ -19,4 +20,34 @@ export const InputWrapper = styled.div`
         display: flex;    
         gap: 24px;     
     } 
+`;
+
+export const SelectContainer = styled.div`
+    position: relative;
+    display: inline-block;
+    min-width: 270px;
+`;
+
+export const InputQuantity = styled.input`
+    ${InputTemplate}
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+    }
+`;
+
+export const SelectLabel = styled.span`
+  display: block;  
+  padding: 0 8px;
+  margin: 0;
+  font-weight: 400;
+  color: ${(props) => 
+    props.$isError 
+      ? props.theme.errorTextColor 
+      : props.$isSuccess 
+        ? props.theme.secondaryTextColor 
+        : props.theme.secondaryTextColor};
 `;

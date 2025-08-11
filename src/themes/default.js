@@ -2,6 +2,8 @@ export const defaultTheme = {
     primaryTextColor: '#18121e',
     secondaryTextColor: '#fdfdfd',
     noteTextColor: '#f2be22',
+    errorTextColor: 'red',
+    successColor: 'green',
     primaryButtonColor: '#1a3e3e',
     secondaryButtonColor: '#fdfdfd',
     bgWhite: '#ffffff',
